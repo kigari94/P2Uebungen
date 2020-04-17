@@ -1,0 +1,75 @@
+Excercise :  Mission completed 
+Filtert nach Wörtern, die ein "auf" enthalten. In Grün sind die Wörter aufgeführt, die ihr filtern solltet. In Rot sind Wörter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Wörtern, die Kleinbuchstaben enthalten. In Grün sind die Wörter aufgeführt, die ihr filtern solltet. In Rot sind Wörter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Ausdrücken, die Zahlen enthalten. In Grün sind die Wörter aufgeführt, die ihr filtern solltet. In Rot sind Wörter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Ausdrücken, die sowohl Klein- als auch Großbuchstauben enthalten. In Grün sind die Wörter aufgeführt, die ihr filtern solltet. In Rot sind Wörter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Ausdr�cken, die ein Whitespace (Leertaste, Zeilenumbruch, Tab) enthalten. In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach W�rtern, die nur aus Kleinbuchstaben von a - n bestehen. 
+In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Ausdr�cken, die mit 1-2 Zahlen bestehen, gefolgt von 1-2 Zahlen, gefolgt von 2-4 Zahlen.
+In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Ausdr�cken, die mit www. beginnen und mit .de aufh�ren. Dazwischen d�rfen nur Gro�- und Kleinbuchstaben sowie Zahlen stehen. 
+In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach W�rtern, die mit s oder S beginnen, aber nicht mit s aufh�ren. Diese W�rter d�rfen nur aus Buchstaben bestehen und haben ab dem 2. Buchstaben nur kleine Buchstaben. In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Namen. Diese Namen d�rfen nur aus Buchstaben bestehen und k�nnen Leerzeichen enthalten. Ab dem 2. Buchstaben d�rfen nur kleine Buchstaben. Der erste Buchstabe darf kleingeschrieben sein. Es d�rfen keine zwei Leerzeichen aufeinander folgen. In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach W�rtern, die mit a, A, B, b, c, C, d oder D beginnen und mit n aufh�ren. Diese W�rter d�rfen nur aus Buchstaben bestehen und haben ab dem 2. Buchstaben nur kleine Buchstaben.In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach W�rtern, die mit a oder A beginnen und ein n im Wort haben. Diese W�rter d�rfen nur aus Buchstaben bestehen und haben ab dem 2. Buchstaben nur kleine Buchstaben. In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Stellt euch vor ihr h�ttet eine riesige Log-Datei eines Spiels. Immer wenn jemand einen neuen Rekord aufstellt, wird dies in der Log-Datei mit einem Zeitstempel (z.B.: 22:34:02) und einer entsprechenden Nachricht eingetragen. Ihr sollt die Zeilen aus der Log-Datei filtern, die so einen Zeitstempel haben, achtet darauf, dass im Zeitstempel auch nur g�ltige Uhrzeiten stehen k�nnen. In so einer Zeile k�nnen Zahlen, Buchstaben, Leerzeichen, Doppelpunkte, Satzzeichen auftreten. Ihr sollt die komplette Zeile filtern.In Gr�n sind die Zeilen aufgef�hrt, die ihr filtern solltet. In Rot sind Zeilen aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Schreibt eine Methode boolean emailCheck(String email), dabei sollt ihr pr�fen, ob die Email-Adresse ein Mix aus Buchstaben und Zahlen, gefolgt von einem @, danach sind Buchstaben erlaubt, ein Punkt muss folgen und danach m�ssen 2-4 Buchstaben wieder folgen. Eure emailCheck()-Methode soll pr�fen, ob angegebene Email-Adressen diesem Schema folgen. In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Mission completed 
+Filtert nach Ausdr�cken, die mit 1-2 Zahlen bestehen, gefolgt von 1-2 Zahlen, gefolgt von 2 oder 4 Zahlen.In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Waiting to be solved 
+Filtert, ob der Ausdruck ein g�ltiger Identifier(Bezeichner/Variablenname) ist. G�ltig ist der Name, wenn er mit einem Buchstaben, $ oder _ beginnt. Die folgenden Zeichen k�nnen Buchstaben, Zahlen, _ und $ sein.In Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
+Excercise :  Waiting to be solved 
+Erweitert eure Aufgabe und prüft, ob eine boolean Variable richtig deklariert wurde. Zwischen dem Datentyp und dem Variablennamen etc. muss mindestens ein Whitespace. Damit darf auch ein Zeilenumbruch stehen.In Grün sind die Wörter aufgeführt, die ihr filtern solltet. In Rot sind Wörter aufgeführt, die ihr nicht filtern solltet.
+
+
+Excercise :  Waiting to be solved 
+Filtert nach Ausdr�cken, die ein richtiges Datum enthalten. Das Jahr soll dabei 4-stellig seinIn Gr�n sind die W�rter aufgef�hrt, die ihr filtern solltet. In Rot sind W�rter aufgef�hrt, die ihr nicht filtern solltet.
+
+
