@@ -1,8 +1,11 @@
 package datastructures;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,9 +52,9 @@ public class ContactMain {
 		// Datei erstellen
 		File file = new File("Vorlesung05/datastructures/contact.txt");
 		if (file.exists()) {
-			System.out.println("Die Datei existiert");
+			System.out.println("The file already exists!");
 		} else {
-			System.out.println("Die Datei wird angelegt");
+			System.out.println("The file will be created!");
 			try {
 				file.createNewFile();
 			} catch (IOException e) {
@@ -77,7 +80,31 @@ public class ContactMain {
 			e.printStackTrace();
 		}
 		// Datei lesen
-		
+		try {
+			FileInputStream fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+
+			while(ois.readObject() != null) {
+				Object objElem = ois.readObject();
+
+				if (objElem instanceof Contact) {
+					Contact contactData = (Contact) objElem;
+					contacts.add(contactData);
+				} else {
+					System.out.println("Object is not the correct one!");
+				}
+			}
+			ois.close();
+			
+			Collections.sort(contacts);
+
+			for (Contact contact : contacts) {
+				System.out.println(contact.getName() + " : " + contact.getPhone());
+			}
+		} catch (IOException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

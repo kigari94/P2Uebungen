@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class AccountMain {
 
 	public static void main(String[] args) {
+		boolean tmp = false;
 
 		HashSet<Account> accounts = new HashSet<Account>();
 		accounts.add(new Account("Spiderman", 113));
@@ -30,8 +31,12 @@ public class AccountMain {
 			if (newUser.equals(account)) {
 				System.out.println("User already exists!");
 			} else {
-//				accounts.add(newUser);
+				tmp = true;
 			}
+		}
+		
+		if(tmp) {
+			accounts.add(newUser);
 		}
 
 		for (Account account : accounts) {

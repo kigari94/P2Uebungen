@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class EventMain {
 
 	public static void main(String[] args) {
+		boolean tmp = false;
+		
 		HashSet<Event> events = new HashSet<Event>();
 		events.add(new Event("Gamescom", "Koeln", "21.08.2020"));
 		events.add(new Event("Gamescom", "Koeln", "21.08.2020"));
@@ -28,8 +30,12 @@ public class EventMain {
 			if (newEvent.equals(event)) {
 				System.out.println("User already exists!");
 			} else {
-//				accounts.add(newEvent);
+				tmp = true;
 			}
+		}
+		
+		if(tmp) {
+			events.add(newEvent);
 		}
 		
 		for (Event event : events) {
