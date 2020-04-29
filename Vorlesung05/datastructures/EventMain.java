@@ -29,6 +29,8 @@ public class EventMain {
 		for (Event event : events) {
 			if (newEvent.equals(event)) {
 				System.out.println("User already exists!");
+				tmp = true;
+				return;
 			} else {
 				tmp = true;
 			}
