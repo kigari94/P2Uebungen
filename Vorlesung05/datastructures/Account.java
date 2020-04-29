@@ -29,7 +29,9 @@ public class Account {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj && this != null && obj instanceof Account) {
+		Account other = (Account) obj;
+		if (this.getUsername().equals(other.getUsername()) && this.getPhone() == other.getPhone() && this != null
+				&& obj instanceof Account) {
 			return true;
 		}
 		return false;

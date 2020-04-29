@@ -30,6 +30,8 @@ public class AccountMain {
 		for (Account account : accounts) {
 			if (newUser.equals(account)) {
 				System.out.println("User already exists!");
+				tmp = false;
+				return;
 			} else {
 				tmp = true;
 			}
