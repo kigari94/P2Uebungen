@@ -1,9 +1,8 @@
 package server;
+
 import java.io.PrintWriter;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.LinkedList;
-import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -12,31 +11,23 @@ public class ServerMain {
 	public void createServer() {
 		try {
 			ServerSocket serverSocket = new ServerSocket(3445, 10);
-			// Fehlerquelle
-			Socket socket = serverSocket.accept();
-		
+
 			System.out.println("Server gestartet");
-			
-			// Output
-			PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
+
 			LinkedList<PrintWriter> printList = new LinkedList<PrintWriter>();
-			printList.add(printWriter);
-			
 			BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
-			
-			// Initialize + start connection thread
-			ConnectionThread connector = new ConnectionThread(queue, serverSocket);
-			connector.start();
 
 			// Initialize + start writer thread
 			WriterThread writer = new WriterThread(queue, printList);
 			writer.start();
 
 			if (!writer.isAlive()) {
-				printWriter.close();
-				socket.close();
 				serverSocket.close();
 			}
+
+			// Initialize + start connection thread
+			ConnectionThread connector = new ConnectionThread(queue, serverSocket, printList);
+			connector.start();
 
 		} catch (Exception e) {
 			e.printStackTrace();
