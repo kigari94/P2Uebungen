@@ -21,7 +21,7 @@ public class ReaderThread extends Thread {
 			try {
 				String message = scanner.nextLine();
 				if(message != null) {
-					System.out.println(message);
+//					System.out.println(message);
 					queue.put(message);
 				}				
 			} catch (Exception e) {

@@ -3,6 +3,7 @@ package server;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.util.LinkedList;
+import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -28,6 +29,16 @@ public class ServerMain {
 			// Initialize + start connection thread
 			ConnectionThread connector = new ConnectionThread(queue, serverSocket, printList);
 			connector.start();
+			
+			Scanner keyboard = new Scanner(System.in);
+			String text = keyboard.nextLine();
+
+			// Closing the server
+			if(text.equalsIgnoreCase("Quit")) {
+				connector.quit();
+				writer.quit();
+				System.out.println("Server gestoppt");
+			} 
 
 		} catch (Exception e) {
 			e.printStackTrace();

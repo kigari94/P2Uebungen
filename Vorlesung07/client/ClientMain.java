@@ -13,6 +13,9 @@ public class ClientMain {
 			Socket socket = new Socket("127.0.0.1", 3445);
 			PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
 			Scanner scanner = new Scanner(socket.getInputStream());
+			System.out.println("Bitte gib einen username ein: ");
+			Scanner name = new Scanner(System.in);
+			String username = name.next();
 			System.out.println("Bitte gib eine Nachricht ein:");
 			
 			// Alt + shift + m
@@ -40,7 +43,7 @@ public class ClientMain {
 			public void run() {
 				Scanner keyboard = new Scanner(System.in);
 				while(isRunning) {
-					String text = keyboard.next();
+					String text = keyboard.nextLine();
 					if(text.equalsIgnoreCase("Quit")) {
 						isRunning = false;
 						System.out.println("Verbindung getrennt");
