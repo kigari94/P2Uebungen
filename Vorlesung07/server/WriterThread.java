@@ -3,18 +3,19 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
 
+import datastructures.Account;
+
 public class WriterThread extends Thread {
 
 	private BlockingQueue<String> queue;
-	private PrintWriter printWriter;
-//	private List<PrintWriter> list;
+//	private PrintWriter printWriter;
+	private LinkedList<PrintWriter> printList;
 	private boolean isRunning = true;
 
-	public WriterThread(BlockingQueue<String> queue, PrintWriter printwriter) {
+	public WriterThread(BlockingQueue<String> queue, LinkedList<PrintWriter> printList) {
 		super();
 		this.queue = queue;
-		this.printWriter = printwriter;
-//		this.list = list;
+		this.printList = printList;
 	}
 	
 	@Override
@@ -22,8 +23,10 @@ public class WriterThread extends Thread {
 		while(isRunning) {
 			try {
 				String message = queue.take();
-				printWriter.println(message);
-				printWriter.flush();
+				for (PrintWriter printWriter : printList) {
+					printWriter.println(message);
+					printWriter.flush();
+				}				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
