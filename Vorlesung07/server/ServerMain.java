@@ -16,18 +16,20 @@ public class ServerMain {
 			Socket socket = serverSocket.accept();
 		
 			System.out.println("Server gestartet");
-
+			
+			// Output
 			PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
 			LinkedList<PrintWriter> printList = new LinkedList<PrintWriter>();
 			printList.add(printWriter);
 			
 			BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
 			
+			// Initialize + start connection thread
 			ConnectionThread connector = new ConnectionThread(queue, serverSocket);
 			connector.start();
 
+			// Initialize + start writer thread
 			WriterThread writer = new WriterThread(queue, printList);
-
 			writer.start();
 
 			if (!writer.isAlive()) {

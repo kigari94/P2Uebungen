@@ -13,30 +13,24 @@ public class ConnectionThread extends Thread{
 
 	private boolean isRunning = true;
 	private ServerSocket serverSocket;
-	private BlockingQueue<String> queue;
-	
-	
+	private BlockingQueue<String> queue;	
 	
 	public ConnectionThread(BlockingQueue<String> queue, ServerSocket serverSocket) {
 		this.serverSocket = serverSocket;
 		this.queue = queue;
 	}
-
-
-
+	
 	@Override
 	public void run() {
-		try {
-			
+		try {			
 			while(isRunning) {
 				Socket socket = serverSocket.accept();
 				
-				// Output
+				// Input
 				Scanner scanner = new Scanner(socket.getInputStream());
-
 				ReaderThread reader = new ReaderThread(scanner, queue);
 
-				// Starting the thread
+				// Starting the input thread
 				reader.start();		
 
 				if (!reader.isAlive()) {
