@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 public class Contact implements Comparable<Contact>, Serializable {
 
+	//TODO nutze die serialVersionUID
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8770199156546982101L;
 	private String name;
 	private long phone;
 

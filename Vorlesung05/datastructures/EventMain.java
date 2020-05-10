@@ -26,6 +26,7 @@ public class EventMain {
 
 		Event newEvent = new Event(valName, valPlace, valDate);
 		
+		//TODO siehe Feedback in der AccountMain
 		for (Event event : events) {
 			if (newEvent.equals(event)) {
 				System.out.println("User already exists!");

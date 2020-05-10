@@ -23,10 +23,15 @@ public class WriterThread extends Thread {
 		while(isRunning) {
 			try {
 				String message = queue.take();
-				for (PrintWriter printWriter : printList) {
-					printWriter.println(message);
-					printWriter.flush();
-				}				
+				//TODO mach das hier threadsafe, eine LinkedList ist nicht threadsafe und viele Instanzen(ConnectionThreads) greifen auf diese Liste zu.
+//				synchronized (printList) {
+					for (PrintWriter printWriter : printList) {
+						//TODO es kann theoretisch eine exception auftreten, wenn bei dem ersten client die verbindung nicht mehr da ist
+						//TODO dann würden aber alle anderen die nachricht nicht mehr bekommen, da der catch-Block außerhalb der for Schleife liegt
+						printWriter.println(message);
+						printWriter.flush();
+					}									
+//				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

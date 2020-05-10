@@ -47,4 +47,5 @@ public class Event {
 		return false;
 	}
 
+	//TODO überschreib die Hashset Methode
 }

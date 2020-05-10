@@ -27,10 +27,12 @@ public class AccountMain {
 
 		Account newUser = new Account(valName, valPhone);
 		
+		//TODO du kannst fragen if(accounts.contains(newUser)) {
 		for (Account account : accounts) {
 			if (newUser.equals(account)) {
 				System.out.println("User already exists!");
 				tmp = false;
+				//TODO das return an dieser stelle ist unschön
 				return;
 			} else {
 				tmp = true;

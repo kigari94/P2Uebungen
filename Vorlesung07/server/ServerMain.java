@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class ServerMain {
+class ServerMain {
 
 	public void createServer() {
 		try {
@@ -40,6 +40,7 @@ public class ServerMain {
 				System.out.println("Server gestoppt");
 			} 
 
+			//TODO schliesse den scanner
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
