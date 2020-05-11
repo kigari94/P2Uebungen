@@ -22,13 +22,21 @@ public class WriterThread extends Thread {
 		while (isRunning) {
 			try {
 				String message = queue.take();
+
 				// Sending the message to all connected clients
+				// using synchronized() for thread safety
 				synchronized (printList) {
-					for (PrintWriter printWriter : printList) {
-						printWriter.println(message);
-						printWriter.flush();
+					try {
+						for (PrintWriter printWriter : printList) {
+							printWriter.println(message);
+							printWriter.flush();
+						}
+					} catch (Exception e) {
+						e.getStackTrace();
 					}
+
 				}
+
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

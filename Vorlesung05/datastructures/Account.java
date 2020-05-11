@@ -37,4 +37,5 @@ public class Account {
 		return false;
 	}
 
+	//TODO überschreibe auch die hashCode Methode
 }
