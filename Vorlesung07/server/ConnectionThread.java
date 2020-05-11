@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 
@@ -13,9 +13,9 @@ public class ConnectionThread extends Thread {
 	private boolean isRunning = true;
 	private ServerSocket serverSocket;
 	private BlockingQueue<String> queue;
-	private LinkedList<PrintWriter> printList;
+	private ArrayList<PrintWriter> printList;
 
-	public ConnectionThread(BlockingQueue<String> queue, ServerSocket serverSocket, LinkedList<PrintWriter> printList) {
+	public ConnectionThread(BlockingQueue<String> queue, ServerSocket serverSocket, ArrayList<PrintWriter> printList) {
 		this.serverSocket = serverSocket;
 		this.queue = queue;
 		this.printList = printList;

@@ -2,7 +2,7 @@ package server;
 
 import java.io.PrintWriter;
 import java.net.ServerSocket;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -15,7 +15,8 @@ public class ServerMain {
 
 			System.out.println("Server gestartet");
 
-			LinkedList<PrintWriter> printList = new LinkedList<PrintWriter>();
+			// Arraylist better choice as the code is more reading than writing or deleting
+			ArrayList<PrintWriter> printList = new ArrayList<PrintWriter>();
 			BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
 
 			// Initialize + start writer thread
@@ -29,16 +30,17 @@ public class ServerMain {
 			// Initialize + start connection thread
 			ConnectionThread connector = new ConnectionThread(queue, serverSocket, printList);
 			connector.start();
-			
+
 			Scanner keyboard = new Scanner(System.in);
 			String text = keyboard.nextLine();
+			keyboard.close();
 
 			// Closing the server
-			if(text.equalsIgnoreCase("Quit")) {
+			if (text.equalsIgnoreCase("Quit")) {
 				connector.quit();
 				writer.quit();
 				System.out.println("Server gestoppt");
-			} 
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();

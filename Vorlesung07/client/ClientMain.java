@@ -18,6 +18,7 @@ public class ClientMain {
 			System.out.println("Bitte gib einen username ein: ");
 			Scanner name = new Scanner(System.in);
 			String username = name.next();
+//			name.close();
 			System.out.println("Bitte gib eine Nachricht ein:");
 
 			// Alt + shift + m
@@ -27,6 +28,7 @@ public class ClientMain {
 				System.out.println(scanner.nextLine());
 			}
 
+			name.close();
 			scanner.close();
 			printWriter.close();
 			socket.close();
@@ -44,8 +46,9 @@ public class ClientMain {
 			public void run() {
 				Scanner keyboard = new Scanner(System.in);
 				while (isRunning) {
-					String text = username + ": " + keyboard.nextLine();
-					if (text.equalsIgnoreCase("Quit")) {
+					String message = keyboard.nextLine();
+					String text = username + ": " + message;
+					if (message.equalsIgnoreCase("Quit")) {
 						isRunning = false;
 						System.out.println("Verbindung getrennt");
 					} else {
