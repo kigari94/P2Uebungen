@@ -18,7 +18,6 @@ public class ClientMain {
 			System.out.println("Bitte gib einen username ein: ");
 			Scanner name = new Scanner(System.in);
 			String username = name.next();
-//			name.close();
 			System.out.println("Bitte gib eine Nachricht ein:");
 
 			// Alt + shift + m

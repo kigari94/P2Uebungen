@@ -7,7 +7,6 @@ import java.util.concurrent.BlockingQueue;
 public class WriterThread extends Thread {
 
 	private BlockingQueue<String> queue;
-//	private PrintWriter printWriter;
 	private ArrayList<PrintWriter> printList;
 	private boolean isRunning = true;
 

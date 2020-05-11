@@ -28,7 +28,10 @@ public class ConnectionThread extends Thread {
 				Socket socket = serverSocket.accept();
 
 				PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
-				printList.add(printWriter);
+
+				synchronized (printList) {
+					printList.add(printWriter);
+				}
 
 				// Input
 				Scanner scanner = new Scanner(socket.getInputStream());

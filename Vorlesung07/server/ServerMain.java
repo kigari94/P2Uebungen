@@ -33,7 +33,6 @@ class ServerMain {
 
 			Scanner keyboard = new Scanner(System.in);
 			String text = keyboard.nextLine();
-			keyboard.close();
 
 			// Closing the server
 			if (text.equalsIgnoreCase("Quit")) {
@@ -42,7 +41,8 @@ class ServerMain {
 				System.out.println("Server gestoppt");
 			}
 
-			//TODO schliesse den scanner
+			keyboard.close();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
