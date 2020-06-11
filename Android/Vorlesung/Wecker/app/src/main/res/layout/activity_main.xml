@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="170dp" />
+        app:layout_constraintGuide_begin="140dp" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -28,53 +28,60 @@
             android:layout_height="match_parent"
             android:minHeight="500dp">
 
-            <EditText
+            <TextView
                 android:id="@+id/editText7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="S"
-                app:layout_constraintBottom_toBottomOf="@+id/editText6"
-                app:layout_constraintEnd_toStartOf="@+id/editText8"
+                app:layout_constraintBottom_toBottomOf="@+id/main_friday"
+                app:layout_constraintEnd_toStartOf="@+id/main_sunday"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editText6"
-                app:layout_constraintTop_toTopOf="@+id/editText6" />
+                app:layout_constraintStart_toEndOf="@+id/main_friday"
+                app:layout_constraintTop_toTopOf="@+id/main_friday" />
 
-            <EditText
-                android:id="@+id/editText2"
+            <TextView
+                android:id="@+id/main_monday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="M"
-                app:layout_constraintBottom_toBottomOf="@+id/editText9"
-                app:layout_constraintEnd_toStartOf="@+id/editText3"
+                app:layout_constraintBottom_toBottomOf="@+id/main_time"
+                app:layout_constraintEnd_toStartOf="@+id/main_tuesday"
                 app:layout_constraintHorizontal_bias="0.35"
                 app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toEndOf="@+id/editText9"
-                app:layout_constraintTop_toTopOf="@+id/editText9"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toEndOf="@+id/main_time"
+                app:layout_constraintTop_toTopOf="@+id/main_time" />
 
-            <EditText
-                android:id="@+id/editText5"
+            <TextView
+                android:id="@+id/main_thursday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="D"
-                app:layout_constraintBottom_toBottomOf="@+id/editText4"
-                app:layout_constraintEnd_toStartOf="@+id/editText6"
+                app:layout_constraintBottom_toBottomOf="@+id/main_wednesday"
+                app:layout_constraintEnd_toStartOf="@+id/main_friday"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editText4"
-                app:layout_constraintTop_toTopOf="@+id/editText4" />
+                app:layout_constraintStart_toEndOf="@+id/main_wednesday"
+                app:layout_constraintTop_toTopOf="@+id/main_wednesday" />
 
-            <EditText
-                android:id="@+id/editText8"
+            <TextView
+                android:id="@+id/main_sunday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="S"
                 app:layout_constraintBottom_toBottomOf="@+id/editText7"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -82,56 +89,62 @@
                 app:layout_constraintStart_toEndOf="@+id/editText7"
                 app:layout_constraintTop_toTopOf="@+id/editText7" />
 
-            <EditText
-                android:id="@+id/editText6"
+            <TextView
+                android:id="@+id/main_friday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="F"
-                app:layout_constraintBottom_toBottomOf="@+id/editText5"
+                app:layout_constraintBottom_toBottomOf="@+id/main_thursday"
                 app:layout_constraintEnd_toStartOf="@+id/editText7"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editText5"
-                app:layout_constraintTop_toTopOf="@+id/editText5" />
+                app:layout_constraintStart_toEndOf="@+id/main_thursday"
+                app:layout_constraintTop_toTopOf="@+id/main_thursday" />
 
-            <EditText
-                android:id="@+id/editText3"
+            <TextView
+                android:id="@+id/main_tuesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="D"
-                app:layout_constraintBottom_toBottomOf="@+id/editText2"
-                app:layout_constraintEnd_toStartOf="@+id/editText4"
+                app:layout_constraintBottom_toBottomOf="@+id/main_monday"
+                app:layout_constraintEnd_toStartOf="@+id/main_wednesday"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editText2"
-                app:layout_constraintTop_toTopOf="@+id/editText2" />
+                app:layout_constraintStart_toEndOf="@+id/main_monday"
+                app:layout_constraintTop_toTopOf="@+id/main_monday" />
 
-            <EditText
-                android:id="@+id/editText4"
+            <TextView
+                android:id="@+id/main_wednesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
                 android:ems="1"
-                android:inputType="textPersonName"
                 android:text="M"
-                app:layout_constraintBottom_toBottomOf="@+id/editText3"
-                app:layout_constraintEnd_toStartOf="@+id/editText5"
+                app:layout_constraintBottom_toBottomOf="@+id/main_tuesday"
+                app:layout_constraintEnd_toStartOf="@+id/main_thursday"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editText3"
-                app:layout_constraintTop_toTopOf="@+id/editText3" />
+                app:layout_constraintStart_toEndOf="@+id/main_tuesday"
+                app:layout_constraintTop_toTopOf="@+id/main_tuesday" />
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/main_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/editText8"
+                app:layout_constraintBottom_toBottomOf="@+id/main_sunday"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/editText8"
-                app:layout_constraintTop_toTopOf="@+id/editText8" />
+                app:layout_constraintStart_toEndOf="@+id/main_sunday"
+                app:layout_constraintTop_toTopOf="@+id/main_sunday" />
 
             <EditText
-                android:id="@+id/editText9"
+                android:id="@+id/main_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -145,7 +158,7 @@
                 app:layout_constraintVertical_bias="0.017" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButtonMain"
+                android:id="@+id/editImageButtonAM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -157,7 +170,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@+id/main_monday"
                 app:layout_constraintVertical_bias="0.18"
                 app:srcCompat="@android:drawable/ic_input_add" />
         </androidx.constraintlayout.widget.ConstraintLayout>
