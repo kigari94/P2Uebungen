@@ -29,7 +29,7 @@
             android:minHeight="500dp">
 
             <TextView
-                android:id="@+id/editText7"
+                android:id="@+id/main_saturday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -83,11 +83,11 @@
                 android:clickable="true"
                 android:ems="1"
                 android:text="S"
-                app:layout_constraintBottom_toBottomOf="@+id/editText7"
+                app:layout_constraintBottom_toBottomOf="@+id/main_saturday"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/editText7"
-                app:layout_constraintTop_toTopOf="@+id/editText7" />
+                app:layout_constraintStart_toEndOf="@+id/main_saturday"
+                app:layout_constraintTop_toTopOf="@+id/main_saturday" />
 
             <TextView
                 android:id="@+id/main_friday"
@@ -99,7 +99,7 @@
                 android:ems="1"
                 android:text="F"
                 app:layout_constraintBottom_toBottomOf="@+id/main_thursday"
-                app:layout_constraintEnd_toStartOf="@+id/editText7"
+                app:layout_constraintEnd_toStartOf="@+id/main_saturday"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/main_thursday"
                 app:layout_constraintTop_toTopOf="@+id/main_thursday" />
@@ -143,15 +143,16 @@
                 app:layout_constraintStart_toEndOf="@+id/main_sunday"
                 app:layout_constraintTop_toTopOf="@+id/main_sunday" />
 
-            <EditText
+            <TextView
                 android:id="@+id/main_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="67dp"
+                android:layout_height="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:ems="5"
                 android:inputType="time"
                 android:text="08:00"
+                android:textSize="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

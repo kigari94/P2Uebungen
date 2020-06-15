@@ -77,8 +77,10 @@ public class EditAlarmActivity extends AppCompatActivity {
             public void onClick(View v) {
                if(alarmClock.isOn()){
                    alarmClock.setOn(false);
+                   setActive.setChecked(false);
                }else {
                    alarmClock.setOn(true);
+                   setActive.setChecked(true);
                }
             }
         });
@@ -94,6 +96,7 @@ public class EditAlarmActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(EditAlarmActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
