@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 alarmClock = (AlarmClock) object;
                 main_time.setText(String.format("%02d:%02d", alarmClock.getHour(), alarmClock.getMinutes()));
 
-                for (int i = 0; i < 7; i++){
+                for (int i = 0; i < textViews.length; i++){
                     if(alarmClock.getDay(i)){
                         textViews[i].setTextColor(ContextCompat.getColor(MainActivity.this, R.color.blue));
                     } else {

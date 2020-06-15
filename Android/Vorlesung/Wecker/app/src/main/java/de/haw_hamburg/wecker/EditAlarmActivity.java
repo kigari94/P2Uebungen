@@ -94,6 +94,12 @@ public class EditAlarmActivity extends AppCompatActivity {
 
                 writerService.writeObject(EditAlarmActivity.this, alarmClock);
 
+//                Intent alarm = new Intent(android.provider.AlarmClock.ACTION_SET_ALARM);
+//                alarm.putExtra(android.provider.AlarmClock.EXTRA_DAYS, monday);
+//                alarm.putExtra(android.provider.AlarmClock.EXTRA_HOUR, alarmClock.getHour());
+//                alarm.putExtra(android.provider.AlarmClock.EXTRA_MINUTES, alarmClock.getMinutes());
+//                startActivity(alarm);
+
                 Intent intent = new Intent(EditAlarmActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
